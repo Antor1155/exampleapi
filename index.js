@@ -11,7 +11,7 @@ app.use(express.json());
 app.get("/", (req, res) => {
   console.log("request got");
   const secret = process.env.SECRET;
-  res.send("Hello World! and the evn is : " + secret);
+  res.send("this is the changed code : " + secret);
 });
 
 app.listen(port, () => {
