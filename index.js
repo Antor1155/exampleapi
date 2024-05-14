@@ -7,7 +7,7 @@ const port = 3000;
 
 app.use(express.json());
 
-// this must be running continiously
+// test22
 app.get("/", (req, res) => {
   console.log("request got");
   const secret = process.env.SECRET;
