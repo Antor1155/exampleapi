@@ -5,6 +5,8 @@ app.use(cors());
 require("dotenv").config();
 const port = 3000;
 
+app.use(express.json());
+
 // this must be running continiously
 app.get("/", (req, res) => {
   console.log("request got");
