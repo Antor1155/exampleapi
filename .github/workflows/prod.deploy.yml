@@ -15,7 +15,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      -name: run ecro
+      - name: run ecro
         run: echo hello world !
 
       # - name: Install dependencies
