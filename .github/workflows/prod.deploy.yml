@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v3
 
       -name: run ecro
-        run: echo hello world 
+        run: echo hello world !
 
       # - name: Install dependencies
       #   run: npm ci
