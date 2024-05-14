@@ -1,12 +1,14 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-app.use(cors);
+app.use(cors());
 require("dotenv").config();
 const port = 3000;
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  console.log("request got");
+  const secret = process.env.SECRET;
+  res.send("Hello World! and the evn is : " + secret);
 });
 
 app.listen(port, () => {
