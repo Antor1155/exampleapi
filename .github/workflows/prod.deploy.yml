@@ -1,0 +1,17 @@
+name: Production Deploy
+
+on:
+  push:
+    branches: ["main"]
+
+env:
+  SECRET: ${{secrets.SECRET}}
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm ci
+      - run: pm2 restart pencil-api -a
