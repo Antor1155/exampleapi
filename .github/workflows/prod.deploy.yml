@@ -15,11 +15,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: checking user
+        run: whoami
+
       - name: checking npm
         run: npm -v
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Restart PM2
+      - name: Restart PM2 trial
         run: pm2 restart example-api -a
