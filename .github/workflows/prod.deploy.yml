@@ -21,7 +21,7 @@ jobs:
       - name: checking npm
         run: npm -v
 
-      - name: Install dependencies
+      - name: Install dependencies on the machine
         run: npm ci
 
       - name: Restart PM2 trial
