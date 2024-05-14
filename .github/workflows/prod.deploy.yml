@@ -14,4 +14,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: npm ci
-      - run: pm2 restart pencil-api -a
+      - run: pm2 restart example-api -a
