@@ -1,1 +1,29 @@
+name: Production Deploy
 
+on:
+  push:
+    branches: ["dev"]
+
+env:
+  SECRET: ${{ secrets.SECRET }}
+  PORT: ${{ secrets.DEV_PORT }}
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: checking user
+        run: whoami
+
+      - name: checking npm
+        run: npm -v
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Restart PM2
+        run: pm2 restart dev-example-api -a
