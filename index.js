@@ -11,7 +11,7 @@ app.use(express.json());
 app.get("/", (req, res) => {
   console.log("request got");
   const secret = process.env.SECRET;
-  res.send("From dev -the key : " + secret  + " RUNNING ON PORT : " + port);
+  res.send("Development server : " + secret  + " RUNNING ON PORT : " + port);
 });
 
 app.listen(port, () => {
